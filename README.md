@@ -7,4 +7,8 @@ Criar nosso diretorio(mkdir)
 
 -Instalar Cypress v13( npm install -D cypress@13.7.3
 
--Abrir e iniciar a config do projeto (npx cypress open)
+-Abrir e executar os testes do projeto na interface grafica (npx cypress open)
+
+-Executar os testes sem visualizar na interface grafica - headless  e permitindo gerar relatório automático
+
+Execute: npx cypress run
