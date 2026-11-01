@@ -1,0 +1,24 @@
+name: Cypress Exercises
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Executar testes do Cypress
+        uses: cypress-io/github-action@v6
+
+      - name: Relatório Mochawesome
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: relatorio-mochawesome
+          path: cypress/reports/html
